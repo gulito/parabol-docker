@@ -65,7 +65,7 @@ jobs:
 
       - name: Install node_modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Build the DBs
         run: |
