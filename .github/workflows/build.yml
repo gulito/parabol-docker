@@ -70,7 +70,7 @@ jobs:
       - name: Build the DBs
         run: |
           cp ${{ env.PARABOL_BUILD_ENV_PATH }} ./.env
-          yarn kysely migrate:latest
+          yarn kysely migrate:latest --verbose
           yarn pg:build
           yarn pg:generate
 
