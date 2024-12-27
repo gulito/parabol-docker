@@ -105,12 +105,12 @@ jobs:
           allow: network.host
           provenance: false
           file: ${{ env.PARABOL_DOCKERFILE }}
-          context: .
+          #context: .
           build-args: |
             "_NODE_VERSION=${{ env.NODE_VERSION }}"
           push: true
           tags: |
-            "${{ secrets.GCP_AR_PARABOL_DEV }}:1" #hier wird manuell die Version gesetzt
+            "${{ secrets.GCP_AR_PARABOL_DEV }}:${{github.sha}}" 
 
       - name: Report Status
         if: failure()
