@@ -110,7 +110,7 @@ jobs:
             "_NODE_VERSION=${{ env.NODE_VERSION }}"
           push: true
           tags: |
-            "${{ secrets.GCP_AR_PARABOL_DEV }}:${{github.sha}}"
+            "${{ secrets.GCP_AR_PARABOL_DEV }}:1" #hier wird manuell die Version gesetzt
 
       - name: Report Status
         if: failure()
