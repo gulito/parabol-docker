@@ -30,7 +30,7 @@ jobs:
           POSTGRES_USER: "tempuser"
           POSTGRES_DB: "tempdb"
         ports:
-          - 5432:5432
+          - 6432:6432
       redis:
         image: redis:7.0-alpine
         ports:
